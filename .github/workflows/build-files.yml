@@ -1,0 +1,27 @@
+name: Convert
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        formats: [docx, pdf, epub, html]
+        filenames: [README]
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+
+      - name: Convert "${{ matrix.filenames }}.md" to ${{ matrix.formats }}
+        uses: docker://pandoc/latex:3.9
+        with:
+          args: --output=output/${{ matrix.filenames }}.${{ matrix.formats }} ${{ matrix.filenames }}.md
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: output
+          path: output
