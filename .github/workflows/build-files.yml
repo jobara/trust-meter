@@ -19,9 +19,9 @@ jobs:
       - name: Convert "${{ matrix.filenames }}.md" to ${{ matrix.formats }}
         uses: docker://pandoc/latex:3.9
         with:
-          args: --output=output/${{ matrix.filenames }}.${{ matrix.formats }} ${{ matrix.filenames }}.md
+          args: --output=${{ matrix.filenames }}.${{ matrix.formats }} ${{ matrix.filenames }}.md
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
-          name: output/${{ matrix.filenames }}.${{ matrix.formats }}
-          path: output/${{ matrix.filenames }}.${{ matrix.formats }}
+          name: ${{ matrix.filenames }}.${{ matrix.formats }}
+          path: ${{ matrix.filenames }}.${{ matrix.formats }}
