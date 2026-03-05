@@ -19,7 +19,7 @@ jobs:
       - name: Convert "${{ matrix.fileNames }}.md" to ${{ matrix.formats }}
         uses: docker://pandoc/latex:3.9
         with:
-          args: --pdfstandard=ua-2 --pdf-engine=lualatex --output=${{ matrix.fileNames }}.${{ matrix.formats }} --from=markdown --to=${{ matrix.formats }} ${{ matrix.fileNames }}.md
+          args: pdfstandard=ua-2 --pdf-engine=lualatex --output=${{ matrix.fileNames }}.${{ matrix.formats }} --from=markdown --to=${{ matrix.formats }} ${{ matrix.fileNames }}.md
 
       - uses: actions/upload-artifact@v7
         with:
