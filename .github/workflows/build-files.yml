@@ -23,5 +23,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: output
-          path: output
+          name: output/${{ matrix.filenames }}.${{ matrix.formats }}
+          path: output/${{ matrix.filenames }}.${{ matrix.formats }}
