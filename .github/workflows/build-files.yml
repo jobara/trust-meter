@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Convert "${{ matrix.fileNames }}.md" to ${{ matrix.formats }}
-        uses: docker://pandoc/typst:3.9
+        uses: docker://pandoc/typst:3.8
         with:
           args: --pdf-engine=typst --pdf-engine-opt=--pdf-standard=a-2b --output=${{ matrix.fileNames }}.${{ matrix.formats }} --from=markdown --to=${{ matrix.formats }} ${{ matrix.fileNames }}.md
 
