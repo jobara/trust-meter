@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        formats: [html, epub, docx]
+        formats: [html, epub, docx, pdf]
         fileNames: [README]
 
     steps:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Convert "${{ matrix.fileNames }}.md" to ${{ matrix.formats }}
-        uses: docker://pandoc/core:3.8
+        uses: docker://pandoc/latex:3.9
         with:
           args: >-
             --standalone
