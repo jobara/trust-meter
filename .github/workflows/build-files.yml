@@ -19,7 +19,12 @@ jobs:
       - name: Convert "${{ matrix.fileNames }}.md" to ${{ matrix.formats }}
         uses: docker://pandoc/core:3.8
         with:
-          args: --output=${{ matrix.fileNames }}.${{ matrix.formats }} --from=markdown --to=${{ matrix.formats }} ${{ matrix.fileNames }}.md
+          args: >-
+            --standalone
+            --output=${{ matrix.fileNames }}.${{ matrix.formats }}
+            --from=markdown
+            --to=${{ matrix.formats }}
+            ${{ matrix.fileNames }}.md
 
       - uses: actions/upload-artifact@v7
         with:
