@@ -1,1 +1,3 @@
 # trust-meter
+
+Sample content
