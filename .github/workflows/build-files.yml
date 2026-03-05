@@ -10,18 +10,18 @@ jobs:
     strategy:
       matrix:
         formats: [docx, pdf, epub, html]
-        filenames: [README]
+        fileNames: [README]
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v5
 
-      - name: Convert "${{ matrix.filenames }}.md" to ${{ matrix.formats }}
+      - name: Convert "${{ matrix.fileNames }}.md" to ${{ matrix.formats }}
         uses: docker://pandoc/latex:3.9
         with:
-          args: --pdf-engine=typst --pdf-engine-opt=--pdf-standard=a-2b --output=${{ matrix.filenames }}.${{ matrix.formats }} ${{ matrix.filenames }}.md
+          args: --pdf-engine=typst --pdf-engine-opt=--pdf-standard=a-2b --output=${{ matrix.fileNames }}.${{ matrix.formats }} --from=markdown --to=${{ matrix.formats }} ${{ matrix.fileNames }}.md
 
       - uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.filenames }}.${{ matrix.formats }}
-          path: ${{ matrix.filenames }}.${{ matrix.formats }}
+          name: ${{ matrix.fileNames }}.${{ matrix.formats }}
+          path: ${{ matrix.fileNames }}.${{ matrix.formats }}
