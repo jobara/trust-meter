@@ -19,7 +19,7 @@ jobs:
       - name: Convert "${{ matrix.filenames }}.md" to ${{ matrix.formats }}
         uses: docker://pandoc/latex:3.9
         with:
-          args: --pdf-engine=typst --output=${{ matrix.filenames }}.${{ matrix.formats }} ${{ matrix.filenames }}.md
+          args: --pdf-engine=typst --pdf-engine-opt=--pdf-standard=a-2b --output=${{ matrix.filenames }}.${{ matrix.formats }} ${{ matrix.filenames }}.md
 
       - uses: actions/upload-artifact@v7
         with:
