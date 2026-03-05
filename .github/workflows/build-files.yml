@@ -22,8 +22,6 @@ jobs:
           args: >-
             --standalone
             --output=${{ matrix.fileNames }}.${{ matrix.formats }}
-            --from=markdown
-            --to=${{ matrix.formats }}
             ${{ matrix.fileNames }}.md
 
       - uses: actions/upload-artifact@v7
