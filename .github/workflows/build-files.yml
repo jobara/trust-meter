@@ -1,4 +1,4 @@
-name: Convert
+name: Convert Documents
 
 on:
   push:
@@ -20,11 +20,12 @@ jobs:
         uses: docker://pandoc/latex:3.9
         with:
           args: >-
-            --standalone
-            --output=${{ matrix.fileNames }}.${{ matrix.formats }}
-            ${{ matrix.fileNames }}.md
+            -f markdown
+            -t ${{ matrix.formats }}
+            -o "${{ matrix.fileNames }}.${{ matrix.formats }}"
+            "./${{ matrix.fileNames }}.md"
 
       - uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.fileNames }}.${{ matrix.formats }}
+          name: ${{ matrix.formats }}
           path: ${{ matrix.fileNames }}.${{ matrix.formats }}
