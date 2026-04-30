@@ -152,7 +152,7 @@ often **adapted** to a specific task through one of several mechanisms:
 
 When an AI system with a role in decision-making exhibits bias against
 individuals due to presumed, often stereotyped, characteristics of marginalized
-goups to which they belong, it  contributes to _statistical discrimination_.
+groups to which they belong, it  contributes to _statistical discrimination_.
 This type of discrimination is generally morally and legally problematic.
 It can occur under conditions in which a person's group identity is explicitly
 disclosed to an AI tool. However, it can also arise in cases in which the group
@@ -172,7 +172,7 @@ However statistical discrimination emerges in the operation of an AI tool, the
 effect is to automate and reinforce existing prejudices, stereotypes, and
 discriminatory practices against marginalized groups. The AI technology becomes
 an amplifier of established social inequalities. Machine learning algorithms
-enable negative assumptions about marginaized groups to be internalized by an AI
+enable negative assumptions about marginalized groups to be internalized by an AI
 system and to influence subsequent decisions, potentially in unanticipated ways.
 
 Outliers are particularly at risk of statistical discrimination, owing to the
