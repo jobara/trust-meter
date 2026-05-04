@@ -159,8 +159,8 @@ disclosed to an AI tool. However, it can also arise in cases in which the group
 identity is excluded from the data made available to the system, but
 nevertheless becomes salient to the decisions via proxy variables. For example,
 if members of a certain ethnic minority are concentrated in a segregated
-suburb, an ET system might "learn" to discriminate against residents of this
-locality, which thus serves as proxy for the marginalized ethnic identity.
+suburb, an AI system might "learn" to discriminate against residents of this
+locality, which thus serves as a proxy for the marginalized ethnic identity.
 
 Moreover, even if proxy variables are not at issue, data about members of
 marginalized groups  can readily be different from the typical or average cases
