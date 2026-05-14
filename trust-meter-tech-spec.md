@@ -125,11 +125,13 @@ domains.
 * _Generative and Agentic:_ The tool produces new content such as text, images, code,
   or executes multi-step tasks. For example, Large Language Models (LLMs) like ChatGPT
   can answer questions, summarize documents, translate text, or write code, all based
-  on instructions given as a prompt. Advanced models can also act as agents, working
-  semi-autonomously to browse the web, interact with other software, and solve complex
-  problems on the user's behalf.
+  on instructions given as a prompt.
+* _Agentic_: The tool executes multi-step tasks to achieve a specific goal. While often
+  powered by generative models, agentic systems go a step further by working
+  semi-autonomously to plan actions, browse the web, interact with other software,
+  and solve complex problems on the user's behalf.
 
-In practice, many tools combine elements of both categories. A general-purpose model is
+In practice, many tools combine elements of these categories. A general-purpose model is
 often **adapted** to a specific task through one of several mechanisms:
 
 * _Transfer learning:_ A general-purpose discriminative model, pre-trained to produce
