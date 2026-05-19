@@ -1,12 +1,6 @@
 ---
 title: Trust meter Introduction
 lang: en-CA
-author:
-    - Clayton H. Lewis
-    - Justin Obara
-    - Joseph Scheuhammer
-    - Julia Stoyanovich
-    - Jason J.G. White
 ---
 
 ## Problem
@@ -715,14 +709,15 @@ necessary condition for it.
 We acknowledge with gratitude the following participants in this project.
 
 * Prithy Ahmed, Standards Council of Canada
-* Clayton H. Lewis, University of Colorado Boulder
+* Clayton H. Lewis, University of Colorado Boulder (Drafting Group co-lead)
 * Cindy Li, OCAD University
 * Justin Obara, OCAD University
+* Vera Roberts, OCAD University
 * David Rokeby, University of Toronto
 * Joseph Scheuhammer, OCAD University
 * Julia Stoyanovich, New York University
 * Jutta Treviranus, OCAD University
-* Jason J.G. White, individual participant
+* Jason J.G. White, individual participant (Drafting Group co-lead)
 
 ## Copyright and License
 

@@ -1,41 +1,7 @@
 ---
 title: Spécification technique Indicateur de confiance
 lang: fr-CA
-author:
-    - Clayton H. Lewis
-    - Justin Obara
-    - Joseph Scheuhammer
-    - Julia Stoyanovich
-    - Jason J.G. White
 ---
-
-## Remarque {-}
-
-Ce document constitue une version provisoire destinée à une consultation publique. Les
-corrections, clarifications et suggestions d’amélioration portant sur l’ensemble du
-document sont les bienvenues. Les types de commentaires supplémentaires suivants sont
-particulièrement recherchés :
-
-* Des exemples de préjudices ayant résulté ou pouvant résulter de l’utilisation de
-    systèmes d’intelligence artificielle, notamment dans des cas de valeurs aberrantes.
-    Les préjudices démontrés par des systèmes antérieurs (n’utilisant pas l’apprentissage
-    automatique) sont également pertinents, dans la mesure où ils s’appliquent.
-* Des stratégies non abordées dans cette version permettant de réduire le risque de
-    discrimination lié à l’utilisation de systèmes d’intelligence artificielle,
-    directement ou indirectement, dans la prise de décision.
-* Des exemples ou analyses montrant lesquelles des stratégies présentées dans cette
-    version se sont avérées efficaces pour atténuer les risques en pratique.
-
-Les commentaires peuvent être soumis par les moyens suivants :
-
-* Créer des tickets dans le [dépôt
-    GitHub](https://github.com/inclusive-design/trust-meter/issues) du projet, idéalement
-    un commentaire par ticket.
-
-* Envoyer un courriel à Vera Roberts à l’adresse
-    [vroberts@ocadu.ca](mailto:vroberts@ocadu.ca)
-
-----
 
 ## Problème
 
