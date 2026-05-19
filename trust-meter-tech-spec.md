@@ -36,17 +36,21 @@ Comments may be submitted by any of the means below.
 
 ## Problem
 
-In statistics, an outlier is "an observation that lies an abnormal distance from
-other values in a random sample from a population".[^1] Membership in one or
-more social groups that are subject to systemic discrimination can result in a
-person's being an outlier in information  provided to an artificial intelligence
-(AI) system. This outlier status is due not merely to the fact of group
-membership.  Rather, it should be understood as arising from the many respects
-in which the circumstances, history and life experiences of such a group members
-can differ from those of larger populations. If the AI system fails to respond
-appropriately to the individual's specific  situation as reflected in the data
-presented to it, there is a risk of amplifying or further perpetuating
-discrimination.
+In the context of AI systems, an outlier is an individual whose data lies outside, or at
+the edge of, the constellation of examples from which a model learns to recognize
+patterns and make predictions. This can happen when a person’s circumstances, history,
+behaviour, or characteristics are poorly represented in the data used to train,
+fine-tune, or guide the system. When an individual falls outside the patterns the model
+has learned well enough to interpret, there is a heightened risk that the person will not
+be understood correctly and that the system will produce an inaccurate classification,
+recommendation, or decision. Membership in one or more social groups that are subject to
+systemic discrimination can increase the likelihood of a person being treated in this way
+by an artificial intelligence (AI) system. This should not be understood as arising
+merely from group membership itself, but from the many respects in which the
+circumstances, history and life experiences of members of such groups can differ from
+those of larger populations. If the AI system fails to respond appropriately to the
+individual’s specific situation as reflected in the data presented to it, there is a risk
+of amplifying or further perpetuating discrimination.
 
 The risk is greatest if the system is used directly or indirectly to make
 decisions affecting the person's human rights or other legal interests.  When
@@ -58,9 +62,6 @@ through algorithmic adjustments or data augmentation may not only prove ineffect
 but could also impose disproportionate privacy burdens on these communities.
 Established practices of social marginalization are reinforced, contrary to moral
 obligations and human rights standards.
-
-[^1]: NIST/SEMATECH e-Handbook of Statistical Methods, [section
-7.1.6](https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm).
 
 ## Purpose
 
