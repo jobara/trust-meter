@@ -112,6 +112,11 @@ ecological impacts such as energy use and water consumption, and harms to commun
 These concerns are significant and warrant attention, but they are outside the scope of
 this specification.
 
+The Trust Meter does not prescribe specific techniques for implementation or monitoring.
+It may identify or suggest approaches that can inform the development of such
+techniques, but any concrete implementation or monitoring method should be determined on
+a case-by-case basis and through system-specific processes.
+
 ## Kinds of AI Tools
 
 AI tools can be grouped along two dimensions: **what** they are designed to do, and
