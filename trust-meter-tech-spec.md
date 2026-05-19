@@ -101,6 +101,23 @@ points below.
 * This report provides foundational guidance to support adoption but does not prescribe
     conformance requirements
 
+### Out of Scope
+
+This specification is limited to the risks of statistical discrimination,
+misclassification, and unreliable decision-making arising when AI systems do not
+adequately account for people whose circumstances are underrepresented, misrepresented,
+or outside the patterns the system has learned to handle well. We recognize that
+AI-supported systems, and the data centres and infrastructures that support them, raise
+many other important concerns, including privacy, data sovereignty, lack of transparency,
+ecological impacts such as energy use and water consumption, and harms to communities.
+These concerns are significant and warrant attention, but they are outside the scope of
+this specification.
+
+The Trust Meter does not prescribe specific techniques for implementation or monitoring.
+It may identify or suggest approaches that can inform the development of such
+techniques, but any concrete implementation or monitoring method should be determined on
+a case-by-case basis and through system-specific processes.
+
 ## Kinds of AI Tools
 
 AI tools can be grouped along two dimensions: **what** they are designed to do, and
