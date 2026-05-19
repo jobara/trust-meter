@@ -53,9 +53,11 @@ decisions affecting the person's human rights or other legal interests.  When
 differences of gender, race, ethnicity, socio-economic position, or disability,
 for example, become salient to the operation of AI systems due to the
 under-representation or misrepresentation of outliers in data, there thus emerges
-a heightened risk of discriminatory decisions. Established practices of social
-marginalization are reinforced, contrary to moral obligations and human rights
-standards.
+a heightened risk of discriminatory decisions. Efforts to rectify these disparities
+through algorithmic adjustments or data augmentation may not only prove ineffective,
+but could also impose disproportionate privacy burdens on these communities.
+Established practices of social marginalization are reinforced, contrary to moral
+obligations and human rights standards.
 
 [^1]: NIST/SEMATECH e-Handbook of Statistical Methods, [section
 7.1.6](https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm).
@@ -87,15 +89,15 @@ Having regard to the range of AI systems that can play a role in
 decision-making, the scope is here interpreted according to the additional
 points below.
 
-- The technical specification applies to machine‑learning‑based classification
+* The technical specification applies to machine‑learning‑based classification
   systems used in decision‑making.
-- It also applies to systems providing information or advice intended to be
+* It also applies to systems providing information or advice intended to be
   taken into account by a human agent as a step toward reaching a decision.
-- The guidance is non‑normative and intended to support implementers, operators,
+* The guidance is non‑normative and intended to support implementers, operators,
   and reviewers.
-- It outlines concepts, risks, and mitigation strategies that can inform future
+* It outlines concepts, risks, and mitigation strategies that can inform future
     standards.
-- This report provides foundational guidance to support adoption but does not prescribe
+* This report provides foundational guidance to support adoption but does not prescribe
     conformance requirements
 
 ## Kinds of AI Tools
@@ -106,43 +108,48 @@ AI tools can be grouped along two dimensions: **what** they are designed to do, 
 **Task-Specific AI** **tools** are designed and trained to perform one particular task
 or set of tasks.
 
-- _Supervised:_ The tool learns from examples where the correct answer has been
+* _Supervised:_ The tool learns from examples where the correct answer has been
   provided by a human. For example, a spam filter is trained on thousands of emails,
   each labeled "spam" or "not spam."
-- _Unsupervised:_ The tool finds patterns or structure in data without being given
+* _Unsupervised:_ The tool finds patterns or structure in data without being given
   correct answers. For example, a customer segmentation tool groups shoppers by
   purchasing behavior without being told in advance what the groups should be.
 
 **General-Purpose AI** **tools** can be applied to many different tasks across many
 domains.
 
-- _Discriminative:_ The tool analyzes, classifies, or retrieves information without
+* _Discriminative:_ The tool analyzes, classifies, or retrieves information without
   producing new content. For example, a search engine ranks web pages by relevance to a
   query, and a general-purpose embedding model can be used for search, classification,
   or clustering across many domains.
-- _Generative:_ The tool produces new content such as text, images, or code. For example,
-  Large Language Models (LLMs) like ChatGPT can answer questions, summarize documents,
-  translate text, or write code, all based on instructions given as a prompt.
+* _Generative and Agentic:_ The tool produces new content such as text, images, code,
+  or executes multi-step tasks. For example, Large Language Models (LLMs) like ChatGPT
+  can answer questions, summarize documents, translate text, or write code, all based
+  on instructions given as a prompt.
+* _Agentic_: The tool executes multi-step tasks to achieve a specific goal. While often
+  powered by generative models, agentic systems go a step further by working
+  semi-autonomously to plan actions, browse the web, interact with other software,
+  and solve complex problems on the user's behalf.
 
-In practice, many tools combine elements of both categories. A general-purpose model is
+In practice, many tools combine elements of these categories. A general-purpose model is
 often **adapted** to a specific task through one of several mechanisms:
 
-- _Transfer learning:_ A general-purpose discriminative model, pre-trained to produce
+* _Transfer learning:_ A general-purpose discriminative model, pre-trained to produce
   useful representations of data, is adapted to perform a specific task using a
   relatively small amount of task-specific training data. For instance, a model trained
   to recognize general features in images might be adapted to detect specific
   manufacturing defects on a factory production line. In deep learning, this is often
   done by keeping the base model fixed and training a small additional layer on top of
   it; in other settings, the model's parameters may be adjusted more broadly.
-- _Fine-tuning:_ A general-purpose generative model may be further trained on
+* _Fine-tuning:_ A general-purpose generative model may be further trained on
   task-specific examples to improve its performance in a particular domain. For instance,
   a general-purpose LLM might be fine-tuned on legal documents to make it more useful for
   legal research.
-- _In-context learning:_ Rather than additional training, examples or instructions may be
+* _In-context learning:_ Rather than additional training, examples or instructions may be
   included directly in the prompt given to the model. The model uses these to guide its
   response. This exploits a notable capability of general-purpose models: their behavior
   can be shaped by the content of the input itself.
-- _Retrieval:_ Because it is difficult to add new information to a model after training,
+* _Retrieval:_ Because it is difficult to add new information to a model after training,
   many tools are given the ability to consult external data sources. For example, they
   may search the web or look up information in private databases, such as client records
   or organizational policies. This allows the tool to draw on current and specific
@@ -232,13 +239,15 @@ respects, and are therefore more likely to receive unreliable results, even when
 data was present in the training set.
 
 Performance can also be **brittle:** small changes in input may produce unexpectedly
-different outputs. For example, [Wang et al.](https://www.nature.com/articles/s41746-024-01029-4.pdf)
+different outputs. For example, [Wang et al.](https://doi.org/10.1038/s41746-024-01029-4)
 found that seemingly equivalent medical questions often received different answers from
 generative AI systems. A special form of this is sycophancy, where the tool adjusts its
 answer to match what the user appears to want. These problems affect all users, but they
 may have special impact on people whose circumstances are already poorly captured by the
 model, since there is less basis for the tool to fall back on, and on people with
 cognitive limitations, who may be less able to detect and correct unreliable results.
+Furthermore, mitigating these disparities is complex. [Fulgu & Capraro (2024)](https://osf.io/preprints/psyarxiv/mp27q_v1)
+showed attempts to reduce such biases can inadvertently lead to new ones.
 
 ### Loss of Context
 
@@ -330,8 +339,8 @@ understanding of these systems matures.
 ### Governance Strategies
 
 The risk of statistical discrimination described earlier in this report should
-be weighed carefully in choosing *whether* AI tools should play any role in
-making a given type of decision, and if so, *what* that role should be. There is
+be weighed carefully in choosing _whether_ AI tools should play any role in
+making a given type of decision, and if so, _what_ that role should be. There is
 a moment during the development of an AI software project at which these risks
 should be evaluated and strategic choices made about **whether the work should
 proceed**, **with what objectives**, and **in what social context**. By this
@@ -411,18 +420,18 @@ developer responsibility. However, deployers of all system types retain
 meaningful control over other data inputs, and these should be managed with the
 same care as training data:
 
-- _Fine-tuning data_. Where a general-purpose system is adapted for a specific
+* _Fine-tuning data_. Where a general-purpose system is adapted for a specific
 use case through fine-tuning, the fine-tuning data should itself be
 representative of the population the system will serve, including marginalized
 groups. A system that performs well on average in its general form may perform
 poorly for specific groups if the fine-tuning data does not reflect their
 circumstances.
-- _In-context examples_. For systems shaped through in-context learning, the
+* _In-context examples_. For systems shaped through in-context learning, the
 examples included in prompts act as a form of training data and are subject to
 the same representational risks. Care should be taken to ensure that in-context
 examples do not systematically exclude or misrepresent the groups the system
 will encounter.
-- _Retrieval corpora_. For systems that consult external data sources, the
+* _Retrieval corpora_. For systems that consult external data sources, the
 content of those sources is a form of data that shapes system behavior.
 Retrieval corpora should be evaluated for coverage and potential
 misrepresentation, and updated regularly to remain current.
@@ -494,11 +503,14 @@ out-of-distribution cases, complementing the detection strategy described above.
 For general-purpose generative systems, guardrails are particularly important
 because the space of possible inputs is essentially unbounded. A guardrail
 cannot anticipate every failure mode, but it can be designed to catch known
-categories of problematic input or output. Deployers have meaningful control
-over guardrails even when they have limited access to model internals, and
-implementing them is therefore a deployer responsibility as much as a developer
-one. Where guardrails are built into a procured system by its developer,
-deployers should seek to understand what they cover and where their limits lie.
+categories of problematic input or output. In the case of LLM-based systems,
+guardrails should ideally include explicit examples and counter-examples to
+clearly define and reinforce the behavior desired for the system . Deployers
+have meaningful control over guardrails even when they have limited access
+to model internals, and implementing them is therefore a deployer responsibility
+as much as a developer one. Where guardrails are built into a procured system
+by its developer, deployers should seek to understand what they cover and where
+their limits lie.
 
 **Retrieval constraints**. For generative systems that consult external data
 sources, architectural choices about how retrieval is implemented can reduce
@@ -596,11 +608,17 @@ perceived user preferences offer some mitigation, though the reliability of this
 approach is difficult to verify and should not be treated as a complete
 solution.
 
-Prompt design is a deployer responsibility, but its effectiveness is constrained
-by properties of the underlying model that deployers do not control. Deployers
-should therefore treat prompt design as a complement to, rather than a
-substitute for, the architectural and data strategies discussed in previous
-sections.
+Prompt design is a deployer responsibility that generally operates on two
+distinct levels: system-level prompts and user-facing design. System prompts
+are invisible, developer-controlled instructions used to set boundaries and
+govern baseline behavior. User-facing design involves architectural choices
+that nudge users to frame their queries more effectively, such as using
+structured input templates or programming the LLM to ask clarifying questions
+during a conversation. While both are crucial deployment levers, their
+effectiveness is constrained by properties of the underlying model that deployers
+do not control. Deployers should therefore treat prompt design as a complement
+to, rather than a substitute for, the architectural and data strategies discussed
+in previous sections.
 
 Opacity creates a particular challenge for human oversight in deployment.
 Reviewers examining the output of a complex AI system cannot in general
@@ -716,4 +734,3 @@ We acknowledge with gratitude the following participants in this project.
 ## Copyright and License
 
 This publication is copyright 2026 by OCAD University, and distributed under the terms of the [Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
-
