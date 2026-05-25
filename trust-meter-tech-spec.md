@@ -1,5 +1,6 @@
 ---
 title: Trust meter Introduction
+subtitle: Addressing statistical discrimination against minorities and outliers in AI and data analytics
 lang: en-CA
 ---
 
