@@ -33,11 +33,11 @@ but could also impose disproportionate privacy burdens on these communities.
 Established practices of social marginalization are reinforced, contrary to moral
 obligations and human rights standards.
 
-[^1]: This section is informed by the concept of “statistical discrimination” as defined
-  in [CAN-ASC-6.2:2025 Accessible and Equitable AI Systems](https://accessible.canada.ca/creating-accessibility-standards/asc-62-accessible-equitable-artificial-intelligence-systems)
-  and outlines the challenge this technical specification addresses, including risks
-  associated with out of distribution cases and outliers. This specification is intended
-  to support implementation of, and compliance with, the CAN-ASC-6.2:2025 standard.
+[^1]: This specification is informed by the concept of “statistical discrimination” as
+  defined in [CAN-ASC-6.2:2025 Accessible and Equitable AI Systems](https://accessible.canada.ca/creating-accessibility-standards/asc-62-accessible-equitable-artificial-intelligence-systems).
+  This specification is intended to support implementation of, and compliance with the
+  guidance regarding mitigating the harms of statistical discrimination outlined in the
+  CAN-ASC-6.2:2025 standard.
 
 ## Purpose
 
