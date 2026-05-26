@@ -4,7 +4,7 @@ subtitle: Addressing statistical discrimination against minorities and outliers 
 lang: en-CA
 ---
 
-## Problem
+## Problem[^1]
 
 In the context of AI systems, an outlier is an individual whose data lies outside, or at
 the edge of, the constellation of examples from which a model learns to recognize
@@ -32,6 +32,12 @@ through algorithmic adjustments or data augmentation may not only prove ineffect
 but could also impose disproportionate privacy burdens on these communities.
 Established practices of social marginalization are reinforced, contrary to moral
 obligations and human rights standards.
+
+[^1]: This section is informed by the concept of “statistical discrimination” as defined
+  in [CAN-ASC-6.2:2025 Accessible and Equitable AI Systems](https://accessible.canada.ca/creating-accessibility-standards/asc-62-accessible-equitable-artificial-intelligence-systems)
+  and outlines the challenge this technical specification addresses, including risks
+  associated with out of distribution cases and outliers. This specification is intended
+  to support implementation of, and compliance with, the CAN-ASC-6.2:2025 standard.
 
 ## Purpose
 
@@ -143,7 +149,7 @@ often **adapted** to a specific task through one of several mechanisms:
   or organizational policies. This allows the tool to draw on current and specific
   information that was not part of its training data.
 
-## Statistical Discrimination
+## Compounding Negative Bias
 
 When an AI system with a role in decision-making exhibits bias against
 individuals due to presumed, often stereotyped, characteristics of marginalized
