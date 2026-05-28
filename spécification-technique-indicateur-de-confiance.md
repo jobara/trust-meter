@@ -93,7 +93,7 @@ La présente spécification se limite aux risques de discrimination statistique,
 mauvaise classification et de prise de décision peu fiable qui surviennent lorsque les
 systèmes d’intelligence artificielle ne tiennent pas adéquatement compte des personnes
 dont les circonstances sont sous-représentées, représentées de manière erronée ou situées
-en dehors des schémas que le système a appris à bien traiter.Nous reconnaissons que les
+en dehors des schémas que le système a appris à bien traiter. Nous reconnaissons que les
 systèmes appuyés par l’intelligence artificielle, ainsi que les centres de données et les
 infrastructures qui les soutiennent, soulèvent de nombreuses autres préoccupations
 importantes, notamment en matière de vie privée, de souveraineté des données, de manque
